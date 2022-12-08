@@ -1,0 +1,63 @@
+<mat-card class="main-su">
+    <form class="context-su">
+        <div class="container-su">
+            <div class="img-su">
+                <img src="../../assets/googleLogo.jpg" height="90%" width="100%">
+            </div>
+            <div class="sign-su">Create your Google Account</div>
+            <div class="names-su">
+                <div class="fname-su">
+                    <mat-form-field appearance="outline" class="name-su" >
+                        <mat-label>First name</mat-label>
+                        <input matInput placeholder="First name">        
+                    </mat-form-field>
+                </div>
+                <div class="fname-su">
+                    <mat-form-field appearance="outline" class="name-su">
+                        <mat-label>Last name</mat-label>
+                        <input matInput placeholder="Last name">        
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="username-su">
+                <mat-form-field appearance="outline" class="user-su">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Username">
+                    <span matTextSuffix>@gmail.com</span>
+                    <mat-hint class="para-su">You can use letters, numbers & periods</mat-hint>      
+                </mat-form-field>                
+            </div>
+            <div class="button-white"><button class="btn-white" mat-flat-button>Use my current email address instead</button></div>
+            <div class="pwd-su">
+                <div class="fpwd-su">
+                    <mat-form-field appearance="outline" class="name-su" >
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password">        
+                    </mat-form-field>                                     
+                </div>
+                <div class="fpwd-su">
+                    <mat-form-field appearance="outline" class="name-su" >
+                        <mat-label>Confirm</mat-label>
+                        <input matInput placeholder="Confirm">        
+                    </mat-form-field>
+                </div>                
+            </div>
+            <mat-hint class="parag-su">Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
+            <!-- <div class="parag-su">Use 8 or more characters with a mix of letters, numbers & symbols</div> -->
+            <div class="check-su">
+                <mat-checkbox class="example-margin">Show password</mat-checkbox>
+            </div>
+            <div class="btns-su">
+                <button class="signup-su" mat-flat-button routerLink="/login">Sign in instead</button>
+                <button mat-flat-button color="primary">Next</button>
+            </div>
+            
+        </div>
+        <div class="logo-su">
+            <div class="logoimg-su">
+                <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" >
+            </div>
+            <div class="text-su">One account. All of Google working for you.</div>
+        </div>
+    </form>
+</mat-card>

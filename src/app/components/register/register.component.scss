@@ -1,0 +1,144 @@
+.main-su {
+    width: 50vw;
+    height: 90vh;
+    position: relative;
+    left: 385px;
+    top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.context-su {
+    width: 87%;
+    height: 84%;
+    border: 0px solid blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-su {
+    width: 55%;
+    height: 100%;
+    border: 0px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    font-weight: 500;
+}
+.logo-su {
+    width: 35%;
+    height: 60%;
+    border: 0px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logoimg-su {
+    width: 100%;
+    height: 80%;
+    border: 0px solid pink;
+}
+.text-su {
+    width: 80%;
+    height: 15%;
+    border: 0px solid black;
+    font-size: medium;
+    text-align: center;
+}
+.img-su {
+    width: 22%;
+}
+.sign-su {
+    width: 100%;
+    height: 10%;
+    border: 0px solid blue;
+    font-size: x-large;    
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.names-su {
+    width: 100%;
+    height: 14%;
+    border: 0px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+.fname-su {
+    width: 48%;
+    height: 55%;
+    font-size: small;
+}
+// input.mat-input-element {
+//     padding-bottom: 2px;
+//     font-size: 12px;
+    
+// }
+.name-su {
+    width: 100% !important;
+    max-height: 30px !important;
+    font-size: small;
+}
+input.mat-input-element {
+    height: 100% !important ;
+    font-size: small;
+}
+.username-su {
+    width: 100%;
+    height: 15%;
+    border: 0px solid blue;
+}
+.user-su {
+    width: 100%;
+    height: 45%;    
+}
+.para-su {
+    color: #8a8484;
+}
+.button-white {
+    width: 100%;
+    height: 13%;
+    border: 0px solid blue;
+    position: relative;
+    right: 12px;
+}
+.btn-white {
+    color:#1a73e8 !important;
+    font-weight: 500;
+    width: 80%;
+    font-size: small;
+}
+.pwd-su {
+    width: 100%;
+    height: 10%;
+    border: 0px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+.fpwd-su {
+    width: 47.5%;
+    height: 80%;
+}
+.parag-su {
+    font-size: 13px;
+    font-weight: 400;
+    height: 8%;
+    color: #8a8484;
+    position: relative;
+    left: 10px;
+}
+.check-su {
+    width: 100%;
+    height: 15%;
+    position: relative;
+    right: 10px;
+}
+.btns-su {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.signup-su {
+    position: relative;
+    right: 10px;
+}
