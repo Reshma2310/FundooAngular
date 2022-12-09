@@ -1,5 +1,5 @@
 <mat-card class="main-fe">
-    <form class="content-fe">
+    <form class="content-fe" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="img-fe">
             <img src="../../assets/googleLogo.jpg" width="100%" height="82%">
         </div>
@@ -8,7 +8,8 @@
         <div class="phone-fe">
             <mat-form-field appearance="outline" class="email-fe">
                 <mat-label>Phone number or email</mat-label>
-                <input matInput>
+                <input matInput formControlName="emailorphone">
+                <mat-error>Enter Email or Phone</mat-error>
             </mat-form-field>
         </div>
         <div class="btn-fe">

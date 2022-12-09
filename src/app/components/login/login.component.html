@@ -1,5 +1,5 @@
 <mat-card class="main-si">
-    <form class="content-si" >
+    <form class="content-si" [formGroup]="registerForm" >
         <div class="img-si">
             <img src="../../assets/googleLogo.jpg" height="90%" width="100%">
         </div>
@@ -8,12 +8,14 @@
         <div class="fields-si">
             <mat-form-field appearance="outline" class="mail-si">
                 <mat-label>Enter your Email</mat-label>
-                <input matInput placeholder="Enter your Email">
+                <input matInput formControlName="email">
+                <mat-error>Enter valid Email</mat-error>
             </mat-form-field>
             <span class="text-si" routerLink="/forgotemail">Forgot Email?</span>
             <mat-form-field appearance="outline" class="mail-si">
                 <mat-label>Password</mat-label>
-                <input matInput placeholder="Password">
+                <input matInput formControlName="password">
+                <mat-error>Enter valid password</mat-error>
             </mat-form-field>
         </div>
         <div class="para-si">
@@ -22,7 +24,7 @@
         </div>
         <div class="btn-si">
             <button mat-flat-button class="create-si" routerLink="/register">Create account</button>
-            <button mat-flat-button color="primary" class="next-si">Next</button>
+            <button mat-flat-button color="primary" class="next-si" (click)="onSubmit()">Next</button>
         </div>
     </form>
 </mat-card>

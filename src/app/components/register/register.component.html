@@ -1,5 +1,5 @@
 <mat-card class="main-su">
-    <form class="context-su">
+    <form class="context-su" [formGroup]="registerForm">
         <div class="container-su">
             <div class="img-su">
                 <img src="../../assets/googleLogo.jpg" height="90%" width="100%">
@@ -9,21 +9,24 @@
                 <div class="fname-su">
                     <mat-form-field appearance="outline" class="name-su" >
                         <mat-label>First name</mat-label>
-                        <input matInput placeholder="First name">        
+                        <input matInput formControlName="firstName">  
+                        <mat-error>Enter First Name</mat-error>      
                     </mat-form-field>
                 </div>
                 <div class="fname-su">
                     <mat-form-field appearance="outline" class="name-su">
                         <mat-label>Last name</mat-label>
-                        <input matInput placeholder="Last name">        
+                        <input matInput formControlName="lastName">
+                        <mat-error>Enter Last Name</mat-error>         
                     </mat-form-field>
                 </div>
             </div>
             <div class="username-su">
                 <mat-form-field appearance="outline" class="user-su">
                     <mat-label>Username</mat-label>
-                    <input matInput placeholder="Username">
+                    <input matInput formControlName="email">
                     <span matTextSuffix>@gmail.com</span>
+                    <mat-error>Enter your email</mat-error> 
                     <mat-hint class="para-su">You can use letters, numbers & periods</mat-hint>      
                 </mat-form-field>                
             </div>
@@ -32,13 +35,15 @@
                 <div class="fpwd-su">
                     <mat-form-field appearance="outline" class="name-su" >
                         <mat-label>Password</mat-label>
-                        <input matInput placeholder="Password">        
+                        <input matInput formControlName="password">
+                        <mat-error>Enter your password</mat-error>         
                     </mat-form-field>                                     
                 </div>
                 <div class="fpwd-su">
                     <mat-form-field appearance="outline" class="name-su" >
                         <mat-label>Confirm</mat-label>
-                        <input matInput placeholder="Confirm">        
+                        <input matInput placeholder="Confirm" formControlName="confirm">
+                        <mat-error>Enter confirm password</mat-error>         
                     </mat-form-field>
                 </div>                
             </div>
@@ -49,7 +54,7 @@
             </div>
             <div class="btns-su">
                 <button class="signup-su" mat-flat-button routerLink="/login">Sign in instead</button>
-                <button mat-flat-button color="primary">Next</button>
+                <button mat-flat-button color="primary" (click)="onSubmit()">Next</button>
             </div>
             
         </div>
