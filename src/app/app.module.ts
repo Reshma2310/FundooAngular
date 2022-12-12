@@ -7,14 +7,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatButtonModule} from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 import { ForgotEmailComponent } from './components/forgot-email/forgot-email.component';
 import { ReactiveFormsModule } from '@angular/forms'; //validation
 import { HttpClientModule } from '@angular/common/http'; //backend communication
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MatSidenavModule } from '@angular/material/sidenav';//sideNav
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import { ArchieveComponent } from './components/archieve/archieve.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { DisplayComponent } from './components/display/display.component';
+import { IconsComponent } from './components/icons/icons.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +31,13 @@ import { HttpClientModule } from '@angular/common/http'; //backend communication
     RegisterComponent,
     LoginComponent,
     CreateNoteComponent,
-    ForgotEmailComponent
+    ForgotEmailComponent,
+    DashboardComponent,
+    ArchieveComponent,
+    TrashComponent,
+    DisplayComponent,
+    IconsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -34,7 +49,11 @@ import { HttpClientModule } from '@angular/common/http'; //backend communication
     MatCheckboxModule,
     MatButtonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

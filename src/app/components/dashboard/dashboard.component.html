@@ -1,0 +1,57 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <div class="keepSym"><img src="../../../assets/keep.png" width="40px"></div>
+        <div class="label-db"><span>Keep</span></div>
+        <div class="space-db"></div>
+        <div class="search-db">
+            <div class="icon-sdb"><img src="../../../assets/search.svg" width="23px" height="23px" class="icon1-db">
+            </div>
+            <input matInput type="text" style="width: 70%;font-size: medium;" placeholder="Search">
+        </div>
+        <div class="space1-db"></div>
+        <div class="headIcon-db">
+            <div class="light-db"><img src="../../../assets/refresh.svg" width="25px"></div>
+            <div class="light-db"><img src="../../../assets/dns.svg" width="25px"></div>
+            <div class="light-db"><img src="../../../assets/settings.svg" width="25px"></div>
+            <div style="width: 4%;"></div>
+            <div class="light-db"><img src="../../../assets/apps.svg" width="25px"></div>
+            <div><img class="img-db" src="../../../assets/account.png" width="25px"></div>
+        </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav class="side-db" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <mat-nav-list>
+                <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>   //for loop-->
+                <a mat-list-item routerLink="/dashboard/notes"><div class="nav-db">
+                    <div class="iconLeft-db"><img src="../../../assets/lightbulb.svg" width="28px" class="light-db"></div>
+                    <div class="text-db">Notes</div>
+                </div></a>
+                <a mat-list-item routerLink="."><div class="nav-db">
+                    <div class="iconLeft-db"><img src="../../../assets/notifications.svg" width="25px" class="light-db"></div>
+                    <div class="text-db">Reminders</div>
+                </div></a>
+                <a mat-list-item routerLink="."><div class="nav-db">
+                    <div class="iconLeft-db"><img src="../../../assets/edit.svg" width="25px" class="light-db"></div>
+                    <div class="text-db">Edit Labels</div>
+                </div></a>
+                <a mat-list-item routerLink="/dashboard/archive"><div class="nav-db">
+                    <div class="iconLeft-db"><img src="../../../assets/archive.svg" width="25px" class="light-db"></div>
+                    <div class="text-db">Archive</div>
+                </div></a>                
+                <a mat-list-item routerLink="/dashboard/trash"><div class="nav-db">
+                    <div class="iconLeft-db"><img src="../../../assets/delete.svg" width="25px" class="light-db"></div>
+                    <div class="text-db">Trash</div>
+                </div></a>
+                 
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

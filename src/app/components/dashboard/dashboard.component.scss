@@ -1,0 +1,140 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+}
+
+.example-toolbar {
+    background-color: white !important;
+    border-bottom: 1px solid #5f6368;
+}
+
+h1.example-app-name {
+    margin-left: 8px;
+}
+
+.example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+}
+
+.side-db {
+    width: 18vw;
+    border: 0px solid black;
+}
+
+.example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+}
+
+.keepSym {
+    width: 3%;
+    height: 100%;
+    border: 0px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-db {
+    width: 4%;
+    height: 100%;
+    display: flex;
+    border: 0px solid black;
+    justify-content: center;
+    align-items: center;
+    color: #5f6368;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.space-db {
+    width: 5%;
+    border: 0px solid blue;
+}
+
+.search-db {
+    width: 48%;
+    height: 70%;
+    border: 0px solid grey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #edebeb;
+}
+
+.icon-sdb {
+    width: 7%;
+    height: 60%;
+    border: 0px solid pink;
+    display: flex;
+    justify-content: center;
+
+}
+
+.icon1-db {
+    color: #5f6368 !important;
+}
+
+input {
+    background-color: transparent;
+    border: 0px solid;
+    color: #CCC;
+}
+
+.space1-db {
+    width: 16%;
+    border: 0px solid pink;
+}
+
+.headIcon-db {
+    width: 22%;
+    height: 100%;
+    border: 0px solid blue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.light-db {
+    opacity: 0.65;
+}
+
+.img-db {
+    border-radius: 50%;
+}
+
+.nav-db {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 0px solid pink;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconLeft-db {
+    width: 20%;
+    height: 100%;
+    border: 0px solid pink;
+}
+
+.text-db {
+    width: 75%;
+    height: 100%;
+    border: 0px solid pink;
+}
