@@ -1,5 +1,5 @@
 <mat-card class="main-si">
-    <form class="content-si" [formGroup]="registerForm" >
+    <form class="content-si" [formGroup]="loginForm" >
         <div class="img-si">
             <img src="../../assets/googleLogo.jpg" height="90%" width="100%">
         </div>
@@ -8,7 +8,7 @@
         <div class="fields-si">
             <mat-form-field appearance="outline" class="mail-si">
                 <mat-label>Enter your Email</mat-label>
-                <input matInput formControlName="email">
+                <input matInput formControlName="emailorphone">
                 <mat-error>Enter valid Email</mat-error>
             </mat-form-field>
             <span class="text-si" routerLink="/forgotemail">Forgot Email?</span>
