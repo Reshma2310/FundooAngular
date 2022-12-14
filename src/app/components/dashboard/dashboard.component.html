@@ -26,7 +26,7 @@
             <mat-nav-list>
                 <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>   //for loop-->
                 <a mat-list-item routerLink="/dashboard/notes"><div class="nav-db">
-                    <div class="iconLeft-db"><img src="../../../assets/lightbulb.svg" width="28px" class="light-db"></div>
+                    <div class="iconLeft-db"><img src="../../../assets/lightbulb.svg" width="25px" class="light-db"></div>
                     <div class="text-db">Notes</div>
                 </div></a>
                 <a mat-list-item routerLink="."><div class="nav-db">
@@ -52,6 +52,9 @@
         <mat-sidenav-content>
             <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
             <router-outlet></router-outlet>
+            <app-get-all-notes></app-get-all-notes>
         </mat-sidenav-content>
     </mat-sidenav-container>
+
+    
 </div>

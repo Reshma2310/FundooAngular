@@ -24,6 +24,7 @@ import { ArchieveComponent } from './components/archieve/archieve.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { DisplayComponent } from './components/display/display.component';
 import { IconsComponent } from './components/icons/icons.component';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { IconsComponent } from './components/icons/icons.component';
     TrashComponent,
     DisplayComponent,
     IconsComponent,
+    GetAllNotesComponent,
 
   ],
   imports: [

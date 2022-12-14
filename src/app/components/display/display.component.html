@@ -1,8 +1,8 @@
-<mat-card class="main-cn">
+<mat-card class="main-cn" *ngFor="let note of childMessage">
     <div class="content-cn">
         <div class="titDes-cn">
-            <span>Title</span>
-            <span>Description</span>
+            <span>{{note.title}}</span>
+            <span>{{note.description}}</span>
         </div>
         <div class="pin-cn">
             <img src="../../../assets/pin.svg" width="25px" style="opacity: 0.65;">

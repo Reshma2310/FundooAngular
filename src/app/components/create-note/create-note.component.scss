@@ -4,6 +4,12 @@
     position: relative;
     left: 380px;
     top: 50px;
+    display: flex;    
+}
+.form-cn {
+    width: 100%;
+    height: 100%;
+    border: 1px solid pink;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
