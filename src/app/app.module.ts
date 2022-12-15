@@ -18,13 +18,17 @@ import { HttpClientModule } from '@angular/common/http'; //backend communication
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MatSidenavModule } from '@angular/material/sidenav';//sideNav
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 import { ArchieveComponent } from './components/archieve/archieve.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { DisplayComponent } from './components/display/display.component';
 import { IconsComponent } from './components/icons/icons.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { UpdateNoteComponent } from './components/update-note/update-note.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +43,7 @@ import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.c
     DisplayComponent,
     IconsComponent,
     GetAllNotesComponent,
+    UpdateNoteComponent,
 
   ],
   imports: [
@@ -55,7 +60,9 @@ import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.c
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

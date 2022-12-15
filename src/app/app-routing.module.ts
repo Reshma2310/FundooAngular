@@ -5,6 +5,7 @@ import { CreateNoteComponent } from './components/create-note/create-note.compon
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DisplayComponent } from './components/display/display.component';
 import { ForgotEmailComponent } from './components/forgot-email/forgot-email.component';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { TrashComponent } from './components/trash/trash.component';
@@ -16,7 +17,7 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
-      { path: 'notes', component: CreateNoteComponent },
+      { path: 'notes', component: GetAllNotesComponent },
       { path: 'archive', component: ArchieveComponent },
       { path: 'trash', component: TrashComponent }
     ]

@@ -1,6 +1,6 @@
 <mat-card class="main-cn" *ngFor="let note of childMessage">
     <div class="content-cn">
-        <div class="titDes-cn">
+        <div class="titDes-cn" (click)="openDialog(note)">
             <span>{{note.title}}</span>
             <span>{{note.description}}</span>
         </div>

@@ -1,21 +1,12 @@
-.main-cn {
-    width: 38vw;
-    height: 20vh;
-    position: relative;
-    left: 380px;
-    top: 50px;
-    display: flex;    
-}
-.form-cn {
-    width: 100%;
-    height: 100%;
-    border: 1px solid pink;
+.main-un {
+    width: 40vw;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center;    
 }
-.content-cn {
+.content-un {
     width: 95%;
     height: 40%;
     border: 0px solid blue;
@@ -23,20 +14,14 @@
     justify-content: space-between;
     align-items: flex-start;
 }
-.footer-cn {
-    width: 95%;
-    height: 25%;
+.icons-un {
+    width: 100%;
+    height: 40%;
     border: 0px solid blue;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
-.icons-cn {
-    width: 55%;
-    height: 100%;
-
-}
-
-.titDes-cn {
+.titDes-un {
     width: 50%;
     height: 100%;
     border: 0px solid orange;
@@ -44,17 +29,19 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.pin-cn {
+.pin-un {
     width: 5%;
     height: 50%;
     border: 0px solid orange;
 }
-input {
-    background-color: transparent;
-    border: 0px solid;
-    // color: #CCC;
+.icon-un {
+    width: 50%;
 }
-.create-cn {
+.btn-un {
     width: 15%;
     opacity: 0.65;
+    margin-right: 20px;
+}
+.titDes-un input{
+    border: 0px solid;
 }

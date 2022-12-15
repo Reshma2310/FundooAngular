@@ -30,4 +30,14 @@ export class NotesService {
     }
     return this.http.getservice('http://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList', true, header)
   }
+
+  updateNote(data: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.http.postservice('http://fundoonotes.incubation.bridgelabz.com/api/notes/updateNotes',data,true, header)
+  }
 }
