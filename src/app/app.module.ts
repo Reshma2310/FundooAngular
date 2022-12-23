@@ -13,10 +13,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { ForgotEmailComponent } from './components/forgot-email/forgot-email.component';
-import { ReactiveFormsModule } from '@angular/forms'; //validation
-import { HttpClientModule } from '@angular/common/http'; //backend communication
+import { ReactiveFormsModule } from '@angular/forms';                 //validation
+import { HttpClientModule } from '@angular/common/http';              //backend communication
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { MatSidenavModule } from '@angular/material/sidenav';//sideNav
+import { MatSidenavModule } from '@angular/material/sidenav';             //sideNav
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -26,8 +26,11 @@ import { DisplayComponent } from './components/display/display.component';
 import { IconsComponent } from './components/icons/icons.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 import { UpdateNoteComponent } from './components/update-note/update-note.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';  //popup to edit note3
+import { FormsModule } from '@angular/forms';        //data sharing
+import { MatMenuModule } from '@angular/material/menu'; //note3 more options
+import { AuthguardServiceService } from './services/authguard-service.service';
+import { FilterPipe } from './Pipes/filter.pipe';
 
 
 @NgModule({
@@ -44,6 +47,7 @@ import { FormsModule } from '@angular/forms';
     IconsComponent,
     GetAllNotesComponent,
     UpdateNoteComponent,
+    FilterPipe,
 
   ],
   imports: [
@@ -62,9 +66,12 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatListModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule
   ],
-  providers: [],
+  providers: [
+    AuthguardServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

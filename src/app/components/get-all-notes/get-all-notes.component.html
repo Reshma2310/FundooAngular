@@ -1,2 +1,2 @@
-<app-create-note ></app-create-note>
-<app-display class="notes-gn" [childMessage]="arrayList"></app-display>
+<app-create-note (refreshCreateNotes)="autorefreshCreateNotes($event)"></app-create-note>
+<app-display class="notes-gn" [childMessage]="arrayList" (refreshGetallNotes)="autorefreshGetallNotes($event)"></app-display>

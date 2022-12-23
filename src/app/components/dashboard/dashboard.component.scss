@@ -83,7 +83,6 @@ h1.example-app-name {
     border: 0px solid pink;
     display: flex;
     justify-content: center;
-
 }
 
 .icon1-db {
@@ -112,6 +111,10 @@ input {
 
 .light-db {
     opacity: 0.65;
+}
+
+.a[tabindex]:focus {
+    background-color: orange;
 }
 
 .img-db {

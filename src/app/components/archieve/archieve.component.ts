@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { NotesService } from 'src/app/services/notesService/notes.service';
 
 @Component({
   selector: 'app-archieve',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./archieve.component.scss']
 })
 export class ArchieveComponent {
+  arrayNote : any;
+  constructor(private note: NotesService) { }
 
+  ngOnInit(): void {
+    this.getArchiveList()
+  }
+
+  getArchiveList(){
+    this.note.getArchiveNotes().subscribe((res: any) => {
+      console.log(res)
+      this.arrayNote=res.data.data
+    })
+  }
 }

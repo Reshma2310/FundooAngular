@@ -7,7 +7,7 @@
         <div class="search-db">
             <div class="icon-sdb"><img src="../../../assets/search.svg" width="23px" height="23px" class="icon1-db">
             </div>
-            <input matInput type="text" style="width: 70%;font-size: medium;" placeholder="Search">
+            <input matInput type="text" style="width: 70%;font-size: medium;color: black;" placeholder="Search" (keyup)="filteredNote($event)">
         </div>
         <div class="space1-db"></div>
         <div class="headIcon-db">
@@ -25,23 +25,23 @@
             fixedTopGap="56">
             <mat-nav-list>
                 <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>   //for loop-->
-                <a mat-list-item routerLink="/dashboard/notes"><div class="nav-db">
+                <a mat-list-item routerLink="/dashboard/notes" class="hover-db"><div class="nav-db">
                     <div class="iconLeft-db"><img src="../../../assets/lightbulb.svg" width="25px" class="light-db"></div>
                     <div class="text-db">Notes</div>
                 </div></a>
-                <a mat-list-item routerLink="."><div class="nav-db">
+                <a mat-list-item routerLink="." class="hover-db"><div class="nav-db">
                     <div class="iconLeft-db"><img src="../../../assets/notifications.svg" width="25px" class="light-db"></div>
                     <div class="text-db">Reminders</div>
                 </div></a>
-                <a mat-list-item routerLink="."><div class="nav-db">
+                <a mat-list-item routerLink="." class="hover-db"><div class="nav-db">
                     <div class="iconLeft-db"><img src="../../../assets/edit.svg" width="25px" class="light-db"></div>
                     <div class="text-db">Edit Labels</div>
                 </div></a>
-                <a mat-list-item routerLink="/dashboard/archive"><div class="nav-db">
+                <a mat-list-item routerLink="/dashboard/archive" class="hover-db"><div class="nav-db">
                     <div class="iconLeft-db"><img src="../../../assets/archive.svg" width="25px" class="light-db"></div>
                     <div class="text-db">Archive</div>
                 </div></a>                
-                <a mat-list-item routerLink="/dashboard/trash"><div class="nav-db">
+                <a mat-list-item routerLink="/dashboard/trash" class="hover-db"><div class="nav-db">
                     <div class="iconLeft-db"><img src="../../../assets/delete.svg" width="25px" class="light-db"></div>
                     <div class="text-db">Trash</div>
                 </div></a>

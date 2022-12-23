@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthguardGuard } from './Authguard/authguard.guard';
 import { ArchieveComponent } from './components/archieve/archieve.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -11,12 +12,14 @@ import { RegisterComponent } from './components/register/register.component';
 import { TrashComponent } from './components/trash/trash.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgotemail', component: ForgotEmailComponent },
   {
-    path: 'dashboard', component: DashboardComponent,
+    path: 'dashboard', component: DashboardComponent, canActivate:[AuthguardGuard],
     children: [
+      {path: '', redirectTo: 'dashboard/notes', pathMatch: 'full'},
       { path: 'notes', component: GetAllNotesComponent },
       { path: 'archive', component: ArchieveComponent },
       { path: 'trash', component: TrashComponent }

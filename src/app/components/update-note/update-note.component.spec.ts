@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogModule } from '@angular/material/dialog';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { UpdateNoteComponent } from './update-note.component';
 
@@ -8,7 +10,12 @@ describe('UpdateNoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UpdateNoteComponent ]
+      declarations: [ UpdateNoteComponent ],
+      imports: [
+        MatDialogModule,
+        RouterTestingModule
+        
+      ],
     })
     .compileComponents();
 

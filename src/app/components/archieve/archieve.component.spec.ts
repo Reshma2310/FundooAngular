@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ArchieveComponent } from './archieve.component';
@@ -8,7 +9,10 @@ describe('ArchieveComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ArchieveComponent ]
+      declarations: [ ArchieveComponent ],
+      imports: [
+        HttpClientModule
+      ]
     })
     .compileComponents();
 

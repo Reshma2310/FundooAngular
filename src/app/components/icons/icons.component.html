@@ -1,8 +1,28 @@
-<div class="main-ins">
-    <img src="../../../assets/add_alert.svg" width="20px">
-    <img src="../../../assets/person_add.svg" width="20px">
-    <img src="../../../assets/palette.svg" width="20px">
-    <img src="../../../assets/image.svg" width="20px">
-    <img src="../../../assets/archive.svg" width="20px">
-    <img src="../../../assets/more.svg" width="20px">
+<div *ngIf="!isTrash" class="main-ins">
+    <button class="more-ins"><img src="../../../assets/add_alert.svg" width="20px"></button>
+    <button class="more-ins"><img src="../../../assets/person_add.svg" width="20px"></button>
+    <button class="more-ins" [matMenuTriggerFor]="colorMenu"><img src="../../../assets/palette.svg"
+            width="20px"></button>
+    <mat-menu #colorMenu="matMenu">
+        <div class="color-ins">
+            <div *ngFor="let color of colors">
+                <button class="btnColor-ins" [style.background]="color" (click)="seletColour(color)"></button>
+            </div>
+        </div>
+    </mat-menu>
+    <button class="more-ins"><img src="../../../assets/image.svg" width="20px"></button>
+    <button class="more-ins" (click)="onArchive()"><img src="../../../assets/archive.svg" width="20px"></button>
+    <button class="more-ins" [matMenuTriggerFor]="menu"><img src="../../../assets/more.svg" width="20px"></button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onDelete()">Delete note</button>
+        <button mat-menu-item>Add label</button>
+        <button mat-menu-item>Add drawing</button>
+        <button mat-menu-item>Make a copy</button>
+        <button mat-menu-item>Show checkboxes</button>
+        <button mat-menu-item>Copy to Google Docs</button>
+    </mat-menu>
+</div>
+<div *ngIf="isTrash">
+    <button mat-icon-button matTooltip="Delete Forever" ><img src="../../../assets/delete_forever.svg"></button>
+    <button mat-icon-button matTooltip="Restore" (click)="onRestrore()"><img src="../../../assets/restore_from_trash.svg"></button>
 </div>

@@ -22,4 +22,14 @@ export class GetAllNotesComponent {
       console.log(this.arrayList);
     })
   }
+
+  autorefreshCreateNotes($event:any){
+    console.log($event);
+    this.getNoteList();
+  }
+
+  autorefreshGetallNotes($event:any){
+    console.log($event);
+    this.getNoteList();
+  }
 }

@@ -40,4 +40,54 @@ export class NotesService {
     }
     return this.http.postservice('http://fundoonotes.incubation.bridgelabz.com/api/notes/updateNotes',data,true, header)
   }
+
+  archiveNote(data: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.http.postservice('http://fundoonotes.incubation.bridgelabz.com/api/notes/archiveNotes', data, true, header)
+  }
+
+  deleteNote(data: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.http.postservice('http://fundoonotes.incubation.bridgelabz.com/api/notes/trashNotes', data, true, header)
+  }
+
+  changeColor(data: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.http.postservice('http://fundoonotes.incubation.bridgelabz.com/api/notes/changesColorNotes', data, true, header)
+  }
+
+  getArchiveNotes() {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.http.getservice('http://fundoonotes.incubation.bridgelabz.com/api/notes/getArchiveNotesList', true, header)
+  }
+
+  getDeleteNotes() {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.http.getservice('http://fundoonotes.incubation.bridgelabz.com/api/notes/getTrashNotesList', true, header)
+  }
 }
